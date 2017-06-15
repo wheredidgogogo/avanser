@@ -32,7 +32,7 @@ In your `config/app.php` add the following `Wheredidgogogo\Avanser\AvanserServic
 
 ### Publish Configuration
 ```shell
-php artisan vendor:publish --provider="'Avanser' => Wheredidgogogo\Avanser\AvanserServiceProvider" --tag="config"
+php artisan vendor:publish
 ```
 
 This will genetate a config file `config/avanser.php` where you will need to enter your Avanser API credentials.

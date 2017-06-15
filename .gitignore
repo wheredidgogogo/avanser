@@ -1,0 +1,13 @@
+/node_modules
+/vendor
+/build
+/.idea
+/_ide_helper.php
+/.phpstorm.meta.php
+/composer.lock
+/scripts/sami/vendor/
+/scripts/sami/build/
+/scripts/sami/cache/
+/scripts/sami/project/
+/scripts/sami/gh-pages/
+.DS_Store

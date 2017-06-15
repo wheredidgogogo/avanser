@@ -36,3 +36,20 @@ php artisan vendor:publish --provider="'Avanser' => Wheredidgogogo\Avanser\Avans
 ```
 
 This will genetate a config file `config/avanser.php` where you will need to enter your Avanser API credentials.
+
+## Use
+
+```shell
+
+$results = \Avanser::getCallData();
+
+```
+
+An array of values can be sent with the query:
+
+
+```shell
+
+date_from, date_to, last_id, limit, evaluations, features, wav, web, detailed, localtime
+
+```

@@ -1,0 +1,14 @@
+{
+    "name": "wheredidgogogo/avanser",
+    "description": "A Laravel package to connect to Avanser call tracking API",
+    "type": "Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthony Gherghetta",
+            "email": "anthony@searchplus.com.au"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

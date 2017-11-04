@@ -9,12 +9,28 @@ class Avanser {
     }
 
 
-    function connect()
+    function connect($settings = [])
     {
 
-        $username = config('avanser.account_id');
-        $key      = config('avanser.account_key');
-        $secret   = config('avanser.account_secret');
+        // get custom connection
+
+        if (isset($settings['username'])) {
+            $username = $settings['username'];
+        } else {
+            $username = config('avanser.account_id');
+        }
+
+        if (isset($settings['key'])) {
+            $key = $settings['key'];
+        } else {
+            $key = config('avanser.account_key');
+        }
+
+        if (isset($settings['secret'])) {
+            $secret = $settings['secret'];
+        } else {
+            $secret = config('avanser.account_secret');
+        }
 
         // get the tokenKey
         $url = "http://api.avanser.com/JSON?action=getTokenKey&account_id={$username}&api_key={$key}";
@@ -104,9 +120,27 @@ class Avanser {
             $localtime = 'yes';
         }
 
-        $token = $this->connect();
+        if (isset($settings['username'])) {
+            $username = $settings['username'];
+        } else {
+            $username = config('avanser.account_id');
+        }
 
-        $username = urlencode(config('avanser.account_id'));
+        if (isset($settings['key'])) {
+            $key = $settings['key'];
+        } else {
+            $key = config('avanser.account_key');
+        }
+
+        if (isset($settings['secret'])) {
+            $secret = $settings['secret'];
+        } else {
+            $secret = config('avanser.account_secret');
+        }
+
+        $token = $this->connect(['username'=>$username,'key'=>$key,'secret'=>$secret]);
+
+        $username = urlencode($username);
         $dateFrom = urlencode($date_from);
         $dateTo   = urlencode($date_to);
         $features = urlencode($features);

@@ -1,7 +1,7 @@
 /node_modules
-/vendor
+vendor
 /build
-/.idea
+.idea
 /_ide_helper.php
 /.phpstorm.meta.php
 /composer.lock

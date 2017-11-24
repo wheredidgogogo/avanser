@@ -9,8 +9,10 @@
             "email": "anthony@searchplus.com.au"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
     "autoload": {
         "psr-4": {
             "Wheredidgogogo\\Avanser\\": "src"

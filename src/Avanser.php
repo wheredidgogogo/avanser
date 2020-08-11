@@ -33,7 +33,7 @@ class Avanser {
         }
 
         // get the tokenKey
-        $url = "http://api.avanser.com/JSON?action=getTokenKey&account_id={$username}&api_key={$key}";
+        $url = "https://api.avanser.com/JSON?action=getTokenKey&account_id={$username}&api_key={$key}";
 
         $json = $this->url_get_contents($url);
 
@@ -43,7 +43,7 @@ class Avanser {
         $challenge = md5( $secret . $json['tokenKey'] ) ;
 
         // ask for a token
-        $url = "http://api.avanser.com/JSON?action=signIn&account_id={$username}&signature={$challenge}";
+        $url = "https://api.avanser.com/JSON?action=signIn&account_id={$username}&signature={$challenge}";
 
         $json = $this->url_get_contents($url);
 
@@ -153,7 +153,7 @@ class Avanser {
         $evaluations = urlencode($evaluations);
 
 
-        $url = "http://api.avanser.com/JSON?account_id={$username}&token={$token}&last_id={$last_id}&evaluations={$evaluations}&features={$features}&web={$web}&detailed={$detailed}&localtime={$localtime}&action=getCDR&date_from={$dateFrom}&date_to={$dateTo}&limit={$limit}&wav={$wav}"; //&evaluations=yes&web=yes&wav=yes";
+        $url = "https://api.avanser.com/JSON?account_id={$username}&token={$token}&last_id={$last_id}&evaluations={$evaluations}&features={$features}&web={$web}&detailed={$detailed}&localtime={$localtime}&action=getCDR&date_from={$dateFrom}&date_to={$dateTo}&limit={$limit}&wav={$wav}"; //&evaluations=yes&web=yes&wav=yes";
         // get the response
         $json = $this->url_get_contents($url);
         // parse it
